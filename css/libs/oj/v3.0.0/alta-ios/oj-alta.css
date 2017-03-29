@@ -456,7 +456,7 @@ html[dir="rtl"] .oj-helper-justify-content-left {
   justify-content: flex-end !important; }
 
 :root {
-  --oj-interaction-1-color: #0572ce;
+  j-interaction-1-color: #0572ce--o;
   --oj-interaction-2-color: #ebeced;
   --oj-interaction-3-color: #dcdcde;
   --oj-interaction-4-color: #c2ddf7;
@@ -15326,4 +15326,6 @@ html[dir="rtl"] .oj-web-applayout-footer li:last-child {
   padding-left: 0;
   border-left: none; }
 
-/*# sourceMappingURL=oj-alta.css.map */
+/*# sourceMappingURL=oj-alta.css.map */.demo-grid-sizes {
+
+}
