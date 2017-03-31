@@ -10,73 +10,208 @@ and open the template in the editor.
  
 </style>-->
 
- 
-<h1>Statistics</h1>
+
+<!--<h1>Statistics</h1>-->
 
 
-<p>Demo width in <span class="demo-screen-range"></span> screen range.</p>
+<!--<p>Demo width in <span class="demo-screen-range"></span> screen range.</p>
 
-  
-  <p><b>Example 1:</b> Odd numbered columns columns are 4 (of 12) columns on 
+
+<p><b>Example 1:</b> Odd numbered columns columns are 4 (of 12) columns on 
     medium and up screens, meaning they behave as if 'oj-md-4' was placed on 
     the cell. The even numbered columns will automatically take up the rest of 
-    the space, meaning they behave as if 'oj-md-8' was placed on them.</p>
+    the space, meaning they behave as if 'oj-md-8' was placed on them.</p>-->
 
-  <div class="demo-flex-display">
-    <div class="oj-sm-odd-cols-12 oj-md-odd-cols-4 oj-flex-items-pad">       
-      <div class="oj-flex">
-          <div class="oj-flex-item">
-              <h>txt1</h>
-              <h>txt2</h>
-           
-          </div>
-        <div class="oj-flex-item">col 2</div> 
-      </div>       
-      <div class="oj-flex">
-        <div class="oj-flex-item">col 1</div>
-        <div class="oj-flex-item">col 2</div> 
-      </div>       
-      <div class="oj-flex">
-        <div class="oj-flex-item">col 1</div>
-        <div class="oj-flex-item">col 2</div> 
-      </div> 
+<div class="demo-grid-sizes demo-flex-display">
+    <div class="oj-sm-odd-cols-12 oj-md-odd-cols-6 oj-flex-items-pad">       
+        <div class="oj-flex">
+            <div class="oj-flex-item">
+                <font size="5" face="Times">Activity Statistic</font>
+                <div class="oj-flex oj-flex-items-pad">
+                    <div class="oj-flex-item oj-sm-2">
+                        <div class="demo-employee-tenure" >
+                            <font size="10" color="blue">7</font>
+                        </div>
+                        <div class="demo-employee-tenure-label">All</div>
+                    </div>
+                    <div class="oj-flex-item oj-sm-2">
+                        <div class="demo-employee-perf">
+                            <font size="10" color="blue">5</font>
+                        </div>
+                        <div class="demo-employee-perf-label">Effective</div>
+                    </div>
+                    <div class="oj-flex-item oj-sm-2">
+                        <div class="demo-employee-perf">
+                            <font size="10" color="blue">2</font>
+                        </div>
+                        <div class="demo-employee-perf-label">Expired</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="oj-flex-item">
+                <font size="5" face="Times">People Statistic</font>
+                <div class="oj-flex oj-flex-items-pad">
+                    <div class="oj-flex-item oj-sm-2">
+                        <div class="demo-employee-tenure">
+                            <font size="10" color="blue">7</font>
+                        </div>
+                        <div class="demo-employee-tenure-label">All</div>
+                    </div>
+                    <div class="oj-flex-item oj-sm-2">
+                        <div class="demo-employee-perf">
+                            <font size="10" color="blue">5</font>
+                        </div>
+                        <div class="demo-employee-perf-label">ValidList</div>
+                    </div>
+                    <div class="oj-flex-item oj-sm-2">
+                        <div class="demo-employee-perf">
+                            <font size="10" color="blue">2</font>
+                        </div>
+                        <div class="demo-employee-perf-label">BlackList</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Expired Activity Statistic-->
+
+
+        </div>
+
+
     </div>
-  </div>  
-  
-  <hr>
-  
-  <p><b>Example 2:</b> Without the "odd-cols" classes used in example 1 you would have to repeat the 
+
+
+    <hr>
+
+    <ul id="listview" aria-label="list with static data" 
+        data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
+        <li id="amybartlet">
+            <div class="oj-flex-items-pad demo-flex-display" >
+                <div class="oj-flex" style="align-items: baseline">
+                    <img src="images/test1.jpg"/>
+                    <div>
+                        <span class="name">
+                            <font size="8">Godfrey</font>
+                        </span>
+                    </div>
+                    <span class="demo-employee-tenure-label">15 days ago</span>
+                </div>
+            </div>
+            <span class="oj-text-xs oj-text-secondary-color">Title: Next Monday, we will have regular activity @东方花园会所with two courts from 19:00 to 21:00</span>
+
+        </li> 
+    </ul>
+
+    <ul id="listview" aria-label="list with static data" 
+        data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
+        <li id="amybartlet">
+
+            <div class="oj-flex-items-pad demo-flex-display"  >
+                <div class="oj-flex" style="align-items: baseline">
+
+                    <img src="images/test1.jpg"/>
+
+                    <div>
+
+                        <span class="name">
+                            <font size="8">Godfrey</font>
+                        </span>
+
+                        <span class="demo-employee-tenure-label">15 days ago</span>
+                    </div>
+                </div>       
+            </div>
+            <div>
+                <span class="oj-text-xs oj-text-secondary-color">Attendee: 12/20</span>
+            </div>
+            <div>
+                <span class="oj-text-xs oj-text-secondary-color">Title: Next Monday, we will have regular activity @东方花园会所with two courts from 19:00 to 21:00</span>
+            </div>
+
+
+
+
+
+
+        </li>
+
+    </ul>
+
+    <ul id="listview" aria-label="list with static data" 
+        data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
+        <li id="amybartlet">
+
+            <div class="oj-flex-items-pad demo-flex-display" >
+
+
+                <div class="oj-flex" style="align-items: baseline">
+
+                    <img src="images/test1.jpg"/>
+
+                    <div>
+
+                        <span class="name">
+                            <font size="8">Godfrey</font>
+                        </span>
+                    </div>
+
+                    <span class="demo-employee-tenure-label">Enroll for 15 activities</span>
+                    <img src="images/test2.jpg"/>
+                </div>
+        </li> 
+    </ul>
+
+    <hr>
+
+    <div class="oj-flex-items-pad demo-flex-display" >
+        <div class="oj-flex" style="align-items: baseline">
+            <img src="images/test1.jpg"/>
+            <div>
+                <span class="name">
+                    <font size="8">Godfrey</font>
+                </span>
+            </div>
+            <span class="demo-employee-tenure-label"> Introduction: A member of RAC team, like basketball, swimming, cooking, and so on.</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--<p><b>Example 2:</b> Without the "odd-cols" classes used in example 1 you would have to repeat the 
     sizing on each column.</p>
-  <div class="oj-flex-items-pad demo-flex-display" >
+<div class="oj-flex-items-pad demo-flex-display" >
     <div class="oj-flex">
-      <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
-      <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
+        <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
+        <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
     </div>       
     <div class="oj-flex">
-      <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
-      <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
+        <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
+        <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
     </div>       
     <div class="oj-flex">
-      <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
-      <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
+        <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
+        <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
     </div> 
-  </div>
-  
-  <hr>
-  
-  <p><b>Example 2:</b> Without the "odd-cols" classes used in example 1 you would have to repeat the 
+</div>
+
+<hr>
+
+<p><b>Example 2:</b> Without the "odd-cols" classes used in example 1 you would have to repeat the 
     sizing on each column.</p>
-  <div class="oj-flex-items-pad demo-flex-display">
+<div class="oj-flex-items-pad demo-flex-display">
     <div class="oj-flex">
-      <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
-      <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
+        <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
+        <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
     </div>       
     <div class="oj-flex">
-      <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
-      <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
+        <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
+        <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
     </div>       
     <div class="oj-flex">
-      <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
-      <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
+        <div class="oj-sm-12 oj-md-4 oj-flex-item">col 1</div>
+        <div class="oj-sm-12 oj-md-8 oj-flex-item">col 2</div> 
     </div> 
-  </div>
+</div>-->
