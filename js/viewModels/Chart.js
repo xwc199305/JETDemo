@@ -44,9 +44,9 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojbutton', 'o
     
     var chartModel = new ChartModel();
     
-    $(
-	function(){
-            ko.applyBindings(chartModel, document.getElementById('chart-container'));
-	}
-    );
+//    $(
+//	function(){
+//            ko.applyBindings(chartModel, document.getElementById('chart-container'));
+//	}
+//    );
 });
