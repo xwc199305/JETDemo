@@ -63,8 +63,8 @@ requirejs.config({
  * For a listing of which JET component modules are required for each component, see the specific component
  * demo pages in the JET cookbook.
  */
-require([ 'ojs/ojcore', 'knockout', 'jquery', 'ojs/ojmodule', 'ojs/ojknockout', 'ojs/ojbutton', 'ojs/ojchart', 'ojs/ojtoolbar', 'ojs/ojmenu', 'promise', 'ojs/ojlistview', 'ojs/ojinputnumber', 'ojs/ojsunburst', 'promise', 'ojs/ojtable', 'ojs/ojarraytabledatasource'], // add additional JET component modules as needed
-        function ( oj, ko, $) // this callback gets executed when all required modules are loaded
+require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojmodule', 'ojs/ojknockout', 'ojs/ojbutton', 'ojs/ojchart', 'ojs/ojtoolbar', 'ojs/ojmenu', 'promise', 'ojs/ojlistview', 'ojs/ojinputnumber', 'ojs/ojsunburst', 'promise', 'ojs/ojtable', 'ojs/ojarraytabledatasource'], // add additional JET component modules as needed
+        function (oj, ko, $) // this callback gets executed when all required modules are loaded
         {
 
             // add any startup code that you want here
@@ -72,13 +72,15 @@ require([ 'ojs/ojcore', 'knockout', 'jquery', 'ojs/ojmodule', 'ojs/ojknockout', 
             }
 
 
-           
-           
+
+
             $(document).ready(
                     function ()
                     {
                         ko.applyBindings(new DemoViewModel());
                         ko.applyBindings(null, document.getElementById('listview'));
+                        ko.applyBindings({nodeValues: ko.observableArray([unitedStates])},
+                                document.getElementById('sunburst-container'));
 //                        ko.applyBindings(chartModel, document.getElementById('chart-container'));
                         ko.applyBindings(StatisticsContentViewModel, document.getElementById('chart-container'));
                         ko.applyBindings(StatisticsContentViewModel, document.getElementById('table'));

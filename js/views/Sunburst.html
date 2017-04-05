@@ -6,32 +6,14 @@ and open the template in the editor.
 
 <h1>Sunburst</h1>
 <div id='sunburst-container'>
-    <div style="padding-left:16px; float: left">
-      <button id= "button1" aria-controls="sunburst"
-         data-bind="click: valueButtonClick, 
-           ojComponent: {component: 'ojButton', label: 'Update values'}">
-      </button>
-    </div>
-    <div style="padding-left:16px; float: left">
-      <button id= "button2" aria-controls="sunburst"
-         data-bind="click: colorButtonClick, 
-           ojComponent: {component: 'ojButton', label: 'Update colors'}">
-      </button>
-    </div>
-    <div style="padding-left:16px; float: left">
-      <button id= "button3" aria-controls="sunburst"
-         data-bind="click: nodeButtonClick, 
-          ojComponent: {component: 'ojButton', label: 'Add/Remove Node'}">
-      </button>
-    </div>
-    <br style="clear: left;"/>
-    
-    <div id="sunburst" data-bind="ojComponent: {
-            component: 'ojSunburst',
+    <div data-bind="ojComponent: {
+            component: 'ojSunburst', 
             animationOnDisplay: 'auto',
-            animationOnDataChange: 'auto',
+            sizeLabel: 'Population',
+            colorLabel: 'Median Household Income',
+            nodeDefaults: {labelDisplay: 'rotated'},
             nodes: nodeValues
         }" 
-        style="max-width:600px;width:100%; height:450px;">
+        style="max-width:650px;width:100%; height:650px;">
     </div>
 </div>

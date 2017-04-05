@@ -18,13 +18,13 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojchart'
         self.stackValue = ko.observable('off');
         self.orientationValue = ko.observable('vertical');
         /* chart data */
-        var barSeries = [{name: "Series 1", items: [42, 34]},
-            {name: "Series 2", items: [55, 30]},
-            {name: "Series 3", items: [36, 50]},
-            {name: "Series 4", items: [22, 46]},
-            {name: "Series 5", items: [22, 46]}];
+        var barSeries = [{name: "22-26", items: [22]},
+            {name: "27-31", items: [27]},
+            {name: "32-36", items: [32]},
+            {name: "37-41", items: [22]},
+            {name: ">41", items: [22]}];
 
-        var barGroups = ["Group A", "Group B"];
+        var barGroups = ["Age Distribution"];  //, "Group B"
         self.barSeriesValue = ko.observableArray(barSeries);
         self.barGroupsValue = ko.observableArray(barGroups);
         /* toggle buttons*/

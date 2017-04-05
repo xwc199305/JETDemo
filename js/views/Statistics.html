@@ -131,20 +131,23 @@ and open the template in the editor.
 
             <div data-bind="ojModule: {name:'home'}"></div>
             <div data-bind="ojModule: {name:'Sunburst'}"></div>
-            
-            <table id="table" summary="Department List" aria-label="Departments Table"
-                   data-bind="ojComponent: {component: 'ojTable', 
+            <div class="oj-sm-odd-cols-12 oj-md-odd-cols-6 oj-flex-items-pad">
+                <table id="table"  summary="Type List" aria-label="Types Table"
+                       data-bind="ojComponent: {component: 'ojTable', 
                                 data: datasource, 
                                 columnsDefault: {sortable: 'none'}, 
-                                columns: [{headerText: 'Department Id', 
-                                           field: 'DepartmentId'},
-                                          {headerText: 'Department Name', 
-                                           field: 'DepartmentName'},
-                                          {headerText: 'Location Id', 
-                                           field: 'LocationId'},
-                                          {headerText: 'Manager Id', 
-                                           field: 'ManagerId'}]}">
-            </table>
+                                columns: [{headerText: 'Type', 
+                                           field: 'Type'},
+                                          {headerText: 'Ball', 
+                                           field: 'Ball'},
+                                          {headerText: 'dance', 
+                                           field: 'dance'},
+                                          {headerText: 'outing', 
+                                           field: 'outing'},
+                                          {headerText: 'other', 
+                                           field: 'other'}]}">
+                </table>
+            </div>
 
 
 
