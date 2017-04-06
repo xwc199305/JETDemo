@@ -23,148 +23,163 @@ and open the template in the editor.
     the space, meaning they behave as if 'oj-md-8' was placed on them.</p>-->
 
 <div class="demo-grid-sizes demo-flex-display">
-    <div class="oj-sm-odd-cols-12 oj-md-odd-cols-6 oj-flex-items-pad">       
-        <div class="oj-flex">
-            <div class="oj-flex-item">
-                <font size="5" face="Times">Activity Statistic</font>
-                <div class="oj-flex oj-flex-items-pad">
-                    <div class="oj-flex-item oj-sm-2">
-                        <div class="demo-employee-tenure" >
-                            <font size="10" color="blue">7</font>
-                        </div>
-                        <div class="demo-employee-tenure-label">All</div>
-                    </div>
-                    <div class="oj-flex-item oj-sm-2">
-                        <div class="demo-employee-perf">
-                            <font size="10" color="blue">5</font>
-                        </div>
-                        <div class="demo-employee-perf-label">Effective</div>
-                    </div>
-                    <div class="oj-flex-item oj-sm-2">
-                        <div class="demo-employee-perf">
-                            <font size="10" color="blue">2</font>
-                        </div>
-                        <div class="demo-employee-perf-label">Expired</div>
-                    </div>
-                </div>
 
-            </div>
-            <div class="oj-flex-item">
-                <font size="5" face="Times">People Statistic</font>
-                <div class="oj-flex oj-flex-items-pad">
-                    <div class="oj-flex-item oj-sm-2">
-                        <div class="demo-employee-tenure">
-                            <font size="10" color="blue">7</font>
-                        </div>
-                        <div class="demo-employee-tenure-label">All</div>
+    <div class="oj-flex">
+
+        <div class="oj-sm-3 oj-flex-item"></div>
+        <div class="oj-flex-item">
+            <font size="5" face="Times">Activity Statistic</font>
+            <div class="oj-flex oj-flex-items-pad">
+                <div class="oj-flex-item oj-sm-2">
+                    <div class="demo-employee-tenure" >
+                        <font size="10" color="blue">7</font>
                     </div>
-                    <div class="oj-flex-item oj-sm-2">
-                        <div class="demo-employee-perf">
-                            <font size="10" color="blue">5</font>
-                        </div>
-                        <div class="demo-employee-perf-label">ValidList</div>
+                    <div class="demo-employee-tenure-label">All</div>
+                </div>
+                <div class="oj-flex-item oj-sm-2">
+                    <div class="demo-employee-perf">
+                        <font size="10" color="blue">5</font>
                     </div>
-                    <div class="oj-flex-item oj-sm-2">
-                        <div class="demo-employee-perf">
-                            <font size="10" color="blue">2</font>
-                        </div>
-                        <div class="demo-employee-perf-label">BlackList</div>
+                    <div class="demo-employee-perf-label">Effective</div>
+                </div>
+                <div class="oj-flex-item oj-sm-2">
+                    <div class="demo-employee-perf">
+                        <font size="10" color="blue">2</font>
                     </div>
+                    <div class="demo-employee-perf-label">Expired</div>
                 </div>
             </div>
-
-            <!--Expired Activity Statistic-->
-
 
         </div>
+
+        <div class="oj-flex-item">
+            <font size="5" face="Times">People Statistic</font>
+            <div class="oj-flex oj-flex-items-pad">
+                <div class="oj-flex-item oj-sm-2">
+                    <div class="demo-employee-tenure">
+                        <font size="10" color="blue">7</font>
+                    </div>
+                    <div class="demo-employee-tenure-label">All</div>
+                </div>
+                <div class="oj-flex-item oj-sm-2">
+                    <div class="demo-employee-perf">
+                        <font size="10" color="blue">5</font>
+                    </div>
+                    <div class="demo-employee-perf-label">ValidList</div>
+                </div>
+                <div class="oj-flex-item oj-sm-2">
+                    <div class="demo-employee-perf">
+                        <font size="10" color="blue">2</font>
+                    </div>
+                    <div class="demo-employee-perf-label">BlackList</div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-sm-3 oj-flex-item"></div>
+
+        <!--Expired Activity Statistic-->
 
 
     </div>
 
 
-    <hr>
 
-    <ul id="listview" aria-label="list with static data" 
-        data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
-        <li id="amybartlet">
-            <div class="oj-flex-items-pad demo-flex-display" >
-                <div class="oj-flex" style="align-items: baseline">
-                    <img src="images/test1.jpg"/>
-                    <div>
-                        <span class="name">
-                            <font size="8">Godfrey</font>
-                        </span>
+
+
+    <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-sm-3 oj-flex-item"></div>
+        <div class="oj-sm-6 oj-flex-item">
+
+            <ul id="listview" aria-label="list with static data" 
+                data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
+                <li id="amybartlet">
+                    <div class="oj-flex-items-pad demo-flex-display" >
+                        <div class="oj-flex" style="align-items: baseline">
+                            <img src="images/test1.jpg"/>
+                            <div>
+                                <span class="name">
+                                    <font size="8">Godfrey</font>
+                                </span>
+                            </div>
+                            <span class="demo-employee-tenure-label">15 days ago</span>
+                        </div>
                     </div>
-                    <span class="demo-employee-tenure-label">15 days ago</span>
-                </div>
-            </div>
-            <span class="oj-text-xs oj-text-secondary-color">Title: Next Monday, we will have regular activity @东方花园会所with two courts from 19:00 to 21:00</span>
+                    <span class="oj-text-xs oj-text-secondary-color">Title: Next Monday, we will have regular activity @东方花园会所with two courts from 19:00 to 21:00</span>
 
-        </li> 
-    </ul>
+                </li> 
+            </ul>
+        </div>
+        <div class="oj-sm-3 oj-flex-item"></div>
+    </div>
 
-    <ul id="listview" aria-label="list with static data" 
-        data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
-        <li id="amybartlet">
+    <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-sm-3 oj-flex-item"></div>
+        <div class="oj-sm-6 oj-flex-item">
 
-            <div class="oj-flex-items-pad demo-flex-display"  >
-                <div class="oj-flex" style="align-items: baseline">
+            <ul id="listview" aria-label="list with static data" 
+                data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
+                <li id="amybartlet">
 
-                    <img src="images/test1.jpg"/>
+                    <div class="oj-flex-items-pad demo-flex-display"  >
+                        <div class="oj-flex" style="align-items: baseline">
 
-                    <div>
+                            <img src="images/test1.jpg"/>
 
-                        <span class="name">
-                            <font size="8">Godfrey</font>
-                        </span>
+                            <div>
 
-                        <span class="demo-employee-tenure-label">15 days ago</span>
+                                <span class="name">
+                                    <font size="8">Godfrey</font>
+                                </span>
+
+                                <span class="demo-employee-tenure-label">15 days ago</span>
+                            </div>
+                        </div>       
                     </div>
-                </div>       
-            </div>
-            <div>
-                <span class="oj-text-xs oj-text-secondary-color">Attendee: 12/20</span>
-            </div>
-            <div>
-                <span class="oj-text-xs oj-text-secondary-color">Title: Next Monday, we will have regular activity @东方花园会所with two courts from 19:00 to 21:00</span>
-            </div>
+                    <div>
+                        <span class="oj-text-xs oj-text-secondary-color">Attendee: 12/20</span>
+                    </div>
+                    <div>
+                        <span class="oj-text-xs oj-text-secondary-color">Title: Next Monday, we will have regular activity @东方花园会所with two courts from 19:00 to 21:00</span>
+                    </div>
 
-            <div data-bind="ojModule: {name:'home'}"></div>
-            <div data-bind="ojModule: {name:'Sunburst'}"></div>
-            <div class="oj-sm-odd-cols-12 oj-md-odd-cols-6 oj-flex-items-pad">
-                <table id="table"  summary="Type List" aria-label="Types Table"
-                       data-bind="ojComponent: {component: 'ojTable', 
-                                data: datasource, 
-                                columnsDefault: {sortable: 'none'}, 
-                                columns: [{headerText: 'Type', 
-                                           field: 'Type'},
-                                          {headerText: 'Ball', 
-                                           field: 'Ball'},
-                                          {headerText: 'dance', 
-                                           field: 'dance'},
-                                          {headerText: 'outing', 
-                                           field: 'outing'},
-                                          {headerText: 'other', 
-                                           field: 'other'}]}">
-                </table>
-            </div>
+                    <div class="oj-flex oj-flex-items-pad">
+                        <div class="oj-sm-6 oj-flex-item">
 
+                            <div id='sunburst-container'>
 
+                                <div id='sunburst1' contextmenu="menu1" data-bind="ojComponent: {
+                                    component: 'ojSunburst',
+                                    animationOnDisplay: 'auto',
+                                    animationOnDataChange: 'auto',
+                                    selectionMode: 'none',
+                                    nodes: nodeValues
+                                }"
+                                    style="max-width:600px;width:100%; height:450px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oj-sm-6 oj-flex-item">
 
+                            <div align="center" data-bind="ojModule: {name:'home'}"></div>
+                        </div>
+                    </div>
 
+                </li>
 
-
-
-
-        </li>
-
-    </ul>
+            </ul>
+        </div>
+        <div class="oj-sm-3 oj-flex-item"></div>
+    </div>
+    
+    <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-sm-3 oj-flex-item"></div>
+        <div class="oj-sm-6 oj-flex-item">
 
     <ul id="listview" aria-label="list with static data" 
         data-bind="ojComponent: {component: 'ojListView', selectionMode: 'multiple'}">
         <li id="amybartlet">
 
-            <div class="oj-flex-items-pad demo-flex-display" >
+            
 
 
                 <div class="oj-flex" style="align-items: baseline">
@@ -183,9 +198,14 @@ and open the template in the editor.
                 </div>
         </li> 
     </ul>
+            </div>
+        <div class="oj-sm-3 oj-flex-item"></div>
+</div>
 
-    <hr>
-
+    
+<div class="oj-flex oj-flex-items-pad">
+    <div class="oj-sm-3 oj-flex-item"></div>
+        <div class="oj-sm-6 oj-flex-item">
     <div class="oj-flex-items-pad demo-flex-display" >
         <div class="oj-flex" style="align-items: baseline">
             <img src="images/test1.jpg"/>
@@ -196,7 +216,39 @@ and open the template in the editor.
             </div>
             <span class="demo-employee-tenure-label"> Introduction: A member of RAC team, like basketball, swimming, cooking, and so on.</span>
         </div>
+        <div id='sunburst-container'>
+
+            <div id='sunburst1' contextmenu="menu1" data-bind="ojComponent: {
+                    component: 'ojSunburst',
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    selectionMode: 'none',
+                    nodes: nodeValues
+                }"
+                 style="max-width:600px;width:100%; height:450px;">
+            </div>
+        </div>
+        <div class="oj-sm-odd-cols-12 oj-md-odd-cols-6 oj-flex-items-pad">
+            <table id="table"  summary="Type List" aria-label="Types Table"
+                   data-bind="ojComponent: {component: 'ojTable', 
+                                data: datasource, 
+                                columnsDefault: {sortable: 'none'}, 
+                                columns: [{headerText: 'Type', 
+                                           field: 'Type'},
+                                          {headerText: 'Ball', 
+                                           field: 'Ball'},
+                                          {headerText: 'dance', 
+                                           field: 'dance'},
+                                          {headerText: 'outing', 
+                                           field: 'outing'},
+                                          {headerText: 'other', 
+                                           field: 'other'}]}">
+            </table>
+        </div>
     </div>
+        </div>
+        <div class="oj-sm-3 oj-flex-item"></div>
+
 </div>
 
 

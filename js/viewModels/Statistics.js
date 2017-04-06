@@ -20,22 +20,10 @@ define(['ojs/ojcore', 'knockout','ojs/ojmodule','jquery', 'ojs/ojknockout', 'ojs
         
         
         
-        
+        //Table
         var deptArray = [{Type: 'Total Num', Ball: 10, dance: 7, outing: 3,other: 4},
         {Type: 'Enrolled Num', Ball: 8, dance: 1, outing: 3,other: 1},
         {Type: 'Ratio', Ball: '80%', dance: '23%', outing: '100%',other: '25%'}];
-//        {DepartmentId: 20, DepartmentName: 'Marketing', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 30, DepartmentName: 'Purchasing', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 40, DepartmentName: 'Human Resources1', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 50, DepartmentName: 'Administration2', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 60, DepartmentName: 'Marketing3', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 70, DepartmentName: 'Purchasing4', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 80, DepartmentName: 'Human Resources5', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 90, DepartmentName: 'Human Resources11', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 100, DepartmentName: 'Administration12', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 110, DepartmentName: 'Marketing13', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 120, DepartmentName: 'Purchasing14', LocationId: 200, ManagerId: 300},
-//        {DepartmentId: 130, DepartmentName: 'Human Resources15', LocationId: 200, ManagerId: 300}];
          self.datasource = new oj.ArrayTableDataSource(deptArray, {idAttribute: 'Type'});
         
         /* toggle button variables */
@@ -62,14 +50,43 @@ define(['ojs/ojcore', 'knockout','ojs/ojmodule','jquery', 'ojs/ojknockout', 'ojs
         ];
         
         
+        var colorHandler = new oj.ColorAttributeGroupHandler();
+
+            var Male = createNode("Male", "0", getValue(), getColor());
+            var Female = createNode("Female", "1", getValue(), getColor());
+            
+
+            
+            var nodes = [Male, Female];
+
+            function createNode(label, id, value, color) {
+                return {label: label,
+                    id: id,
+                    value: value,
+                    color: color,
+                    shortDesc: "&lt;b&gt;" + label +
+                      "&lt;/b&gt;&lt;br/&gt;Value: " + value};
+            }
+
+            function addChildNodes(parent, childNodes) {
+                parent.nodes = [];
+                for (var i = 0; i < childNodes.length; i++) {
+                    parent.nodes.push(childNodes[i]);
+                }
+            }
+            function getValue() {
+                return Math.round(50 + 50 * Math.random());
+            }
+
+            function getColor() {
+                return colorHandler.getValue(Math.floor(Math.random() * 4));
+            }
+
+            self.nodeValues = ko.observableArray(nodes);
+        
         
     }
-//    $(
-//        function() 
-//        {
-//            ko.applyBindings(null, document.getElementById('listview'));
-//        }
-//    );
+
     
     return StatisticsContentViewModel;
 });
